@@ -1,0 +1,14 @@
+# indexa-js:
+#   filter: rjsmin
+#   output: ckanext-indexa/%(version)s-indexa.js
+#   contents:
+#     - js/indexa.js
+#   extra:
+#     preload:
+#       - base/main
+
+# indexa-css:
+#   filter: cssrewrite
+#   output: ckanext-indexa/%(version)s-indexa.css
+#   contents:
+#     - css/indexa.css
