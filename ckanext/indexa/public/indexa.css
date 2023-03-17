@@ -1,0 +1,21 @@
+.account-masthead {
+    background-color: #23043A !important;
+}
+
+.masthead {
+    background-color: #170127 !important;
+}
+
+body {
+    background-color: #170127 !important;
+}
+
+.site-footer {
+    background-color: #170127 !important;
+}
+
+.masthead .navigation .nav-pills li a:hover,
+.masthead .navigation .nav-pills li a:focus,
+.masthead .navigation .nav-pills li.active a {
+    background-color: #170127 !important;
+}
