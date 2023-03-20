@@ -1,0 +1,5 @@
+{% for key,value in h.custom_tags().items() %}
+    <button class="show-tag {{ key }}" onclick="window.location.href='/dataset/?tags={{ key }}'">
+        <p>{{ value }}</p>
+    </button>
+{% endfor %}

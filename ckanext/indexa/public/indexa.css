@@ -10,6 +10,7 @@ body {
     background-color: #170127 !important;
 }
 
+.search-form,
 .site-footer {
     background-color: #170127 !important;
 }
@@ -18,4 +19,65 @@ body {
 .masthead .navigation .nav-pills li a:focus,
 .masthead .navigation .nav-pills li.active a {
     background-color: #170127 !important;
+}
+
+.module-content .search-form {
+    background-color: #170127 !important;
+}
+
+.tags {
+    background-color: #23043A !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    background: url("https://indexageodata.com/wp-content/uploads/2019/01/SLIDER.jpg") !important;
+    background-size: contain !important;
+}
+
+.module-search {
+    padding: 0 !important;
+
+}
+
+.box {
+    border: 2px solid #ccc !important;
+}
+
+.search-container {
+    padding-top: 50px !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.show_all_tags {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.show-tag {
+    flex-basis: calc(100% / 4); /* Se muestra en cuatro columnas */
+    height: 100px;
+    background: #eee url("../../../images/bg.png");
+    border: 0px solid #ccc;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    .show-tag {
+        flex-basis: calc(100% / 3); /* Se muestra en tres columnas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .show-tag {
+        flex-basis: 100%; /* Se muestra en una sola columna */
+    }
+}
+
+.button_all_datasets {
+    background-color: #9b51e0;
+    border-color: #9b51e0;
 }
