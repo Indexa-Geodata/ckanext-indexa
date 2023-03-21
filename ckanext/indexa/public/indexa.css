@@ -10,7 +10,6 @@ body {
     background-color: #170127 !important;
 }
 
-.search-form,
 .site-footer {
     background-color: #170127 !important;
 }
@@ -21,7 +20,7 @@ body {
     background-color: #170127 !important;
 }
 
-.module-content .search-form {
+.home-search-form {
     background-color: #170127 !important;
 }
 
@@ -83,5 +82,24 @@ body {
 }
 
 .tags-icons {
-    max-width: 35px;
+    max-width: 35px !important;
+}
+
+.main {
+    min-height: 0px !important;
+}
+
+.tags-icons-dataset {
+    max-width: 25px !important;
+    flex-direction: row
+}
+
+.p-tags-dataset {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 10px !important;
+}
+
+.a-tags-dataset {
+    display: flex !important;
 }

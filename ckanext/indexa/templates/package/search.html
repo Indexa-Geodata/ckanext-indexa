@@ -1,0 +1,15 @@
+{% ckan_extends %}
+{% block secondary_content %}
+    <div class="filters">
+        <div>
+            {{ h.snippet('snippets/facet_custom_tags.html') }}
+        </div>
+         <div>
+            {{ h.snippet('snippets/facet_list.html', title=facet_titles['groups'], name='groups', search_facets=search_facets) }}
+        </div>
+        <a class="close no-text hide-filters"><i class="fa fa-times-circle"></i><span class="text">close</span></a>
+    </div>
+        <div>
+            {{ h.snippet('snippets/facet_list.html', title=facet_titles['organization'], name='organization', search_facets=search_facets) }}
+        </div>
+{% endblock %}
