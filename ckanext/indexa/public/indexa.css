@@ -58,7 +58,7 @@ body {
 }
 
 .show-tag {
-    flex-basis: calc(100% / 4); /* Se muestra en cuatro columnas */
+    flex-basis: calc(100% / 11);
     height: 100px;
     background: #eee url("../../../images/bg.png");
     border: 0px solid #ccc;
@@ -80,4 +80,8 @@ body {
 .button_all_datasets {
     background-color: #9b51e0;
     border-color: #9b51e0;
+}
+
+.tags-icons {
+    max-width: 35px;
 }
