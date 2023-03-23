@@ -1,0 +1,25 @@
+{% ckan_extends %}
+{% block resource_content %}
+    {% block package_archive_notice %}
+        {% if is_activity_archive %}
+            <div id="activity-archive-notice" class="alert alert-danger">
+                {% trans url=h.url_for(pkg.type ~ '.read', id=pkg.id) %}
+                    You're currently viewing an old version of this dataset. To see the
+                    current version, click <a href="{{ url }}">here</a>.
+                {% endtrans %}
+            </div>
+        {% endif %}
+    {% endblock %}
+    {% block resource_read_title %}<h1 class="page-heading">{{ h.resource_display_name(res) | truncate(50) }}</h1>
+    {% endblock %}
+    {% block resource_read_url %}
+        {% if res.url and h.is_url(res.url) %}
+            <p class="text-muted ellipsis">{{ _('URL:') }} <a class="resource-url-analytics" href="{{ res.url }}"
+                                                              title="{{ res.url }}">{{ res.url }}</a></p>
+        {% elif res.url %}
+            <p class="text-muted break-word">{{ _('URL:') }} {{ res.url }}</p>
+        {% endif %}
+    {% endblock %}
+{% endblock %}
+{% block resource_license %}
+{% endblock %}

@@ -1,5 +1,14 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
+from ckan.lib.helpers import literal
+
+
+def build_custom_nav_icon(string):
+    return literal(f"{string[:string.find('a href') + 2]}class=\"a-color\"{string[string.find('a href') + 2:]}")
+
+
+def custom_read_more(string):
+    return string
 
 
 def custom_tags():
@@ -11,11 +20,10 @@ def custom_tags():
             'industria': 'Industria', 'legislacionyjusticia': 'Legislación y Justicia', 'transporte': 'Transporte',
             'turismo': 'Turismo', 'urbanismoeinfraestructura': 'Urbanismo e Infraestructura', 'vivienda': 'Vivienda'}
 
+
 class IndexaPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
-
-    # IConfigurer
 
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')
@@ -24,4 +32,4 @@ class IndexaPlugin(plugins.SingletonPlugin):
                              'indexa')
 
     def get_helpers(self):
-        return {'custom_tags': custom_tags}
+        return {'custom_tags': custom_tags, 'build_custom_nav_icon': build_custom_nav_icon}

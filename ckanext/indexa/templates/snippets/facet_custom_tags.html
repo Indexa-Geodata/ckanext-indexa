@@ -8,9 +8,10 @@
         <ul class="list-unstyled nav nav-simple nav-facet">
             {% set active = 'active' %}
             {% for key,value in h.custom_tags().items() %}
-
                 <li class="nav-item  {% if key in request.url %}{{ active }} {% endif %}">
-                    <a href="?tags={{ key }}" title="{{ value }}" class="a-tags-dataset">
+                    <a href="{% if key not in request.url %}?tags={{ key }}{% else %}/dataset/{% endif %}"
+                       title="{{ value }}"
+                       class="a-tags-dataset">
                         <img src="/images/{{ key }}.png" class="tags-icons-dataset">
                         <p class="p-tags-dataset">{{ value }}</p>
                     </a>

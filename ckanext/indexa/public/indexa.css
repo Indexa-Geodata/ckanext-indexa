@@ -1,5 +1,5 @@
 .account-masthead {
-    background-color: #23043A !important;
+    background-color: #291042 !important;
 }
 
 .masthead {
@@ -102,4 +102,38 @@ body {
 
 .a-tags-dataset {
     display: flex !important;
+}
+
+.pill {
+    background-color: #291042 !important;
+}
+
+.nav-item.active > a, .nav-aside li.active a {
+    background-color: #291042 !important;
+}
+
+.btn-primary {
+    background-color: #291042 !important;
+}
+
+a-dataset {
+    flex-direction: row;
+    margin: 0 0 0 10px !important;
+}
+
+.a-links {
+    color: #291042 !important;
+}
+
+.account-masthead .account ul li a:hover {
+    background-color: #170127 !important;
+}
+
+.btn-success {
+    background-color: #291042 !important;
+    border-color: #291042 !important;
+}
+
+.a-color {
+    color: #291042 !important;
 }

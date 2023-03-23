@@ -1,0 +1,14 @@
+{% set _class = _class or 'tag-list' %}
+{% block show_tags_list %}
+    <section class="module module-narrow social">
+        <h2 class="module-heading"><i class="fa fa-share-square-o"></i>Etiquetas</h2>
+        <ul class="list-unstyled nav nav-simple nav-facet">
+            {% for tag in tags %}
+                <li class="nav-item"><a class="a-tags-dataset"
+                        href="{% url_for 'dataset.search', tags=tag.name %}"> <img src="/images/{{ tag.name }}.png"
+                                                                                   class="tags-icons-dataset">
+                    <p class="p-tags-dataset">{{ h.custom_tags()[tag.name] }}</p></a></li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}
