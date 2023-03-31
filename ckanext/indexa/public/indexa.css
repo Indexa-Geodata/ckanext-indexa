@@ -137,9 +137,66 @@ a-dataset {
 .a-color {
     color: #291042 !important;
 }
-/*ul.hierarchy-tree > li,*/
-/*ul.hierarchy-tree-top > li{*/
-/*    border: black;*/
-/*    border-style: solid;*/
-/*    padding-bottom: 20px;*/
-/*}*/
+
+.hierarchy-tree {
+    /*background: url("images/vline.png") repeat-y;*/
+}
+
+.hierarchy-tree,
+.hierarchy-tree-top {
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+.span-tree {
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+    padding-left: 3px;
+}
+
+.span-hidden {
+    visibility: hidden;
+    padding-left: 16px;
+}
+
+.ul-nested {
+    display: none;
+}
+
+.ul-active {
+    display: block;
+}
+
+.hierarchy-tree-top {
+    display: flow;
+    align-items: center;
+    justify-content: center;
+}
+
+.group-tree-member {
+    /*border-bottom: solid #170127 1px;*/
+}
+
+.btn-tree {
+    white-space: normal !important;
+    width: 80%;
+    background-color: #291042;
+    color: white;
+}
+.btn-tree:hover {
+    color: #C4C4C4 !important;
+}
+
+.div-tree {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.li-group-member {
+    width: 100%;
+}
