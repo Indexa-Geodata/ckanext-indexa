@@ -1,0 +1,202 @@
+.account-masthead {
+    background-color: #291042 !important;
+}
+
+.masthead {
+    background-color: #170127 !important;
+}
+
+body {
+    background-color: #170127 !important;
+}
+
+.site-footer {
+    background-color: #170127 !important;
+}
+
+.masthead .navigation .nav-pills li a:hover,
+.masthead .navigation .nav-pills li a:focus,
+.masthead .navigation .nav-pills li.active a {
+    background-color: #170127 !important;
+}
+
+.home-search-form {
+    background-color: #170127 !important;
+}
+
+.tags {
+    background-color: #23043A !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    background: url("https://indexageodata.com/wp-content/uploads/2019/01/SLIDER.jpg") !important;
+    background-size: contain !important;
+}
+
+.module-search {
+    padding: 0 !important;
+
+}
+
+.box {
+    border: 2px solid #ccc !important;
+}
+
+.search-container {
+    padding-top: 50px !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.show_all_tags {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.show-tag {
+    flex-basis: calc(100% / 11);
+    height: 100px;
+    background: #eee url("../../../images/bg.png");
+    border: 0px solid #ccc;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    .show-tag {
+        flex-basis: calc(100% / 3); /* Se muestra en tres columnas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .show-tag {
+        flex-basis: 100%; /* Se muestra en una sola columna */
+    }
+}
+
+.button_all_datasets {
+    background-color: #9b51e0;
+    border-color: #9b51e0;
+}
+
+.tags-icons {
+    max-width: 35px !important;
+}
+
+.main {
+    min-height: 0px !important;
+}
+
+.tags-icons-dataset {
+    max-width: 25px !important;
+    flex-direction: row
+}
+
+.p-tags-dataset {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 0 10px !important;
+}
+
+.a-tags-dataset {
+    display: flex !important;
+}
+
+.pill {
+    background-color: #291042 !important;
+}
+
+.nav-item.active > a, .nav-aside li.active a {
+    background-color: #291042 !important;
+}
+
+.btn-primary {
+    background-color: #291042 !important;
+}
+
+a-dataset {
+    flex-direction: row;
+    margin: 0 0 0 10px !important;
+}
+
+.a-links {
+    color: #291042 !important;
+}
+
+.account-masthead .account ul li a:hover {
+    background-color: #170127 !important;
+}
+
+.btn-success {
+    background-color: #291042 !important;
+    border-color: #291042 !important;
+}
+
+.a-color {
+    color: #291042 !important;
+}
+
+.hierarchy-tree {
+    /*background: url("images/vline.png") repeat-y;*/
+}
+
+.hierarchy-tree,
+.hierarchy-tree-top {
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+.span-tree {
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+    padding-left: 3px;
+}
+
+.span-hidden {
+    visibility: hidden;
+    padding-left: 16px;
+}
+
+.ul-nested {
+    display: none;
+}
+
+.ul-active {
+    display: block;
+}
+
+.hierarchy-tree-top {
+    display: flow;
+    align-items: center;
+    justify-content: center;
+}
+
+.group-tree-member {
+    /*border-bottom: solid #170127 1px;*/
+}
+
+.btn-tree {
+    white-space: normal !important;
+    width: 80%;
+    background-color: #291042;
+    color: white;
+}
+.btn-tree:hover {
+    color: #C4C4C4 !important;
+}
+
+.div-tree {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.li-group-member {
+    width: 100%;
+}

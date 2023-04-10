@@ -38,23 +38,26 @@ Suggested values:
 To install ckanext-indexa:
 
 1. Activate your CKAN virtual environment, for example:
-
+```
      . /usr/lib/ckan/default/bin/activate
-
+```
 2. Clone the source and install it on the virtualenv
-
-    git clone https://github.com/enprava/ckanext-indexa.git
-    cd ckanext-indexa
-    pip install -e .
+	
+```
+	git clone https://github.com/enprava/ckanext-indexa.git
+	cd ckanext-indexa
+	pip install -e .
 	pip install -r requirements.txt
+```
 
 3. Add `indexa` to the `ckan.plugins` setting in your CKAN
    config file (by default the config file is located at
    `/etc/ckan/default/ckan.ini`).
 
 4. Restart CKAN. For example if you've deployed CKAN with Apache on Ubuntu:
-
+```
      sudo service apache2 reload
+```
 
 
 ## Config settings

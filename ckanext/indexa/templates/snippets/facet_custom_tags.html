@@ -1,0 +1,33 @@
+<section class="module module-narrow module-shallow">
+    <h2 class="module-heading">
+        <i class="fa fa-filter"></i>
+        {% set title = 'Etiquetas' %}
+        {{ title }}
+    </h2>
+    <nav aria-label="{{ title }}">
+        <ul class="list-unstyled nav nav-simple nav-facet">
+            {% for key,value in h.custom_tags().items() %}
+                <li class="nav-item {# {% if key in request.url %}{{ active }} {% endif %} #}">
+                    {% if key not in request.url %}
+                        {% if '/organization' in request.url %}
+                            {% set url_tag = h.get_url_tag_org(url=request.url, tag=key) %}
+                        {% else %}
+                            {% set url_tag = h.add_url_param(new_params={'tags':key}) %}
+                        {% endif %}
+                        <a href="{{ url_tag }}"
+                           title="{{ value }}"
+                           class="a-tags-dataset">
+                    {% else %}
+                        {% set url_tag = h.remove_url_param(key='tags', value=key) %}
+                        <a href="{{ url_tag }}"
+                           title="{{ value }}"
+                           class="a-tags-dataset">
+                    {% endif %}
+                    <img src="/images/{{ key }}.png" class="tags-icons-dataset">
+                    <p class="p-tags-dataset">{{ value }}</p>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</section>

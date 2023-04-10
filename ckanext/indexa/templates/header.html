@@ -1,0 +1,25 @@
+{% ckan_extends %}
+
+{% block header_logo %} {% if g.site_logo %}
+    <a class="navbar-brand logo" href="{{ h.url_for('home.index') }}"><img
+            src="https://indexageodata.com/wp-content/uploads/2019/01/indexa_light.png" alt="{{ g.site_title }}"
+            title="{{ g.site_title }}"/></a>
+{% else %}
+    <h1>
+        <a href="{{ h.url_for('home.index') }}">{{ g.site_title }}</a>
+    </h1>
+    {% if g.site_description %}
+        <h2>{{ g.site_description }}</h2>{% endif %} {% endif %} {% endblock %}
+
+{% block header_site_navigation_tabs %}
+    {{ h.build_nav_main(
+		    ('dataset.search', _('Datasets')),
+		    ('organization.index', _('Organizations')),
+		    ('group.index', _('Groups'))) }}
+{% endblock %}
+
+{% block header_account_notlogged %}
+    <li>{% link_for _('Log in'), named_route='user.login' %}</li>
+{% endblock %}
+
+{% block header_site_search %}{% endblock %}

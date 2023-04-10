@@ -1,0 +1,13 @@
+{% ckan_extends %}
+{% block description %}
+    {% if organization.description %}
+        <p class="description">
+            {{ h.markdown_extract(organization.description, 180) }}
+        </p>
+        <p class="read-more">
+            <a class="a-color" href="/organization/about/{{ organization.name }}">{{ _('read more') }}</a>
+        </p>
+    {% else %}
+        <p class="empty">{{ _('There is no description for this organization') }}</p>
+    {% endif %}
+{% endblock %}
