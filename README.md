@@ -44,7 +44,7 @@ To install ckanext-indexa:
 2. Clone the source and install it on the virtualenv
 	
 	```
-	    git clone https://github.com/enprava/ckanext-indexa.git
+	    	git clone https://github.com/enprava/ckanext-indexa.git
 		cd ckanext-indexa
 		pip install -e .
 		pip install -r requirements.txt
