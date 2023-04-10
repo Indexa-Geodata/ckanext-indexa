@@ -16,7 +16,8 @@ def get_url_tag_org(url, tag):
 
 
 def build_custom_nav_icon(string):
-    return literal(f"{string[:string.find('a href') + 2]}class=\"a-color\"{string[string.find('a href') + 2:]}")
+    return literal(
+        "{0}class=\"a-color\"{1}".format(string[:string.find('a href') + 2], string[string.find('a href') + 2:]))
 
 
 def custom_read_more(string):
