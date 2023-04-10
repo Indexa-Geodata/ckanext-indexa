@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.lib.helpers import literal
