@@ -3,6 +3,18 @@ import ckan.plugins.toolkit as toolkit
 from ckan.lib.helpers import literal
 
 
+def get_url_tag_org(url, tag):
+    index = url.find('organization/')
+    organization = url[index + 13:]
+    end_index = len(organization)
+    if '/' in organization:
+        end_index = organization.find('/')
+    if '?' in organization:
+        end_index = organization.find('?')
+    organization = organization[:end_index]
+    return f'/dataset?tags={tag}&organization={organization}'
+
+
 def build_custom_nav_icon(string):
     return literal(f"{string[:string.find('a href') + 2]}class=\"a-color\"{string[string.find('a href') + 2:]}")
 
@@ -32,4 +44,5 @@ class IndexaPlugin(plugins.SingletonPlugin):
                              'indexa')
 
     def get_helpers(self):
-        return {'custom_tags': custom_tags, 'build_custom_nav_icon': build_custom_nav_icon}
+        return {'custom_tags': custom_tags, 'build_custom_nav_icon': build_custom_nav_icon,
+                'get_url_tag_org': get_url_tag_org}
