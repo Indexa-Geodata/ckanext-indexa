@@ -12,7 +12,7 @@ def get_url_tag_org(url, tag):
     if '?' in organization:
         end_index = organization.find('?')
     organization = organization[:end_index]
-    return f'/dataset?tags={tag}&organization={organization}'
+    return '/dataset?tags={0}&organization={1}'.format(tag, organization)
 
 
 def build_custom_nav_icon(string):
