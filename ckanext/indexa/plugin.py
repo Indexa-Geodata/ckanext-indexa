@@ -11,7 +11,7 @@ def get_csv_id(resources):
             if "CSV" in resource["format"]:
                 return resource["id"]
         except:
-            if 'CSV' in resource.format:
+            if "CSV" in resource.format:
                 return resource.id
 
 
@@ -78,6 +78,7 @@ def custom_tags():
 class IndexaPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     plugins.implements(plugins.ITemplateHelpers)
+    plugins.implements(plugins.IRoutes)
 
     def update_config(self, config_):
         toolkit.add_template_directory(config_, "templates")
@@ -92,3 +93,9 @@ class IndexaPlugin(plugins.SingletonPlugin):
             "get_dataset_url": get_dataset_url,
             "get_csv_id": get_csv_id,
         }
+
+    def before_map(self, route_map):
+        return route_map
+
+    def after_map(self, route_map):
+        return route_map

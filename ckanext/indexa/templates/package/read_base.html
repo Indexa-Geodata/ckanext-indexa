@@ -5,7 +5,7 @@
     {{ h.build_custom_nav_icon(h.build_nav_icon(dataset_type ~ '.groups', _('Groups'), id=pkg.id if is_activity_archive else pkg.name, icon='users')) }}
     {{ h.build_custom_nav_icon(h.build_nav_icon(dataset_type ~ '.activity', _('Activity Stream'), id=pkg.id if is_activity_archive else pkg.name, icon='clock-o')) }} #}
     <li  {% if 'map' not in h.current_url() %} class="active" {% endif %}>
-        <a class="a-color" href="{{ h.url_for('%s.read' % pkg.type, id=pkg.name) }}/resource/{{csv}}"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Información</a>
+        <a class="a-color" href="{{ h.url_for('%s.read' % pkg.type, id=pkg.name) }}"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Información</a>
     </li>
     <li  {% if 'map' in h.current_url() %} class="active" {% endif %}>
         <a class="a-color" href="{{ h.url_for('%s.read' % pkg.type, id=pkg.name) }}/resource/{{csv}}"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Tabla</a>
