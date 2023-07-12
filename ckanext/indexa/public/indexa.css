@@ -66,13 +66,15 @@ body {
 
 @media screen and (max-width: 768px) {
     .show-tag {
-        flex-basis: calc(100% / 3); /* Se muestra en tres columnas */
+        flex-basis: calc(100% / 3);
+        /* Se muestra en tres columnas */
     }
 }
 
 @media screen and (max-width: 480px) {
     .show-tag {
-        flex-basis: 100%; /* Se muestra en una sola columna */
+        flex-basis: 100%;
+        /* Se muestra en una sola columna */
     }
 }
 
@@ -108,7 +110,8 @@ body {
     background-color: #291042 !important;
 }
 
-.nav-item.active > a, .nav-aside li.active a {
+.nav-item.active>a,
+.nav-aside li.active a {
     background-color: #291042 !important;
 }
 
@@ -138,9 +141,6 @@ a-dataset {
     color: #291042 !important;
 }
 
-.hierarchy-tree {
-    /*background: url("images/vline.png") repeat-y;*/
-}
 
 .hierarchy-tree,
 .hierarchy-tree-top {
@@ -150,9 +150,12 @@ a-dataset {
 
 .span-tree {
     cursor: pointer;
-    -webkit-user-select: none; /* Safari 3.1+ */
-    -moz-user-select: none; /* Firefox 2+ */
-    -ms-user-select: none; /* IE 10+ */
+    -webkit-user-select: none;
+    /* Safari 3.1+ */
+    -moz-user-select: none;
+    /* Firefox 2+ */
+    -ms-user-select: none;
+    /* IE 10+ */
     user-select: none;
     padding-left: 3px;
 }
@@ -182,12 +185,17 @@ a-dataset {
 
 .btn-tree {
     white-space: normal !important;
-    width: 80%;
+    width: 55%;
     background-color: #291042;
-    color: white;
+    color: #373737;
+    background-color: #fdf5ff;
+    border-style: inset !important;
+    border-color: black !important;
+    margin-bottom: 2px !important;
 }
+
 .btn-tree:hover {
-    color: #C4C4C4 !important;
+    color: #000000 !important;
 }
 
 .div-tree {
@@ -199,4 +207,63 @@ a-dataset {
 
 .li-group-member {
     width: 100%;
+}
+
+.download-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-style: inset;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-color: #C4C4C4;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.download-card:last-child{
+    border: 0;
+}
+
+.download-card div {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 550px) {
+    .download-card div{
+        min-width: none !important;
+    }
+}
+.download-card span,
+.download-card a,
+.download-card p {
+    margin-right: 5px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.download-card .label{
+    min-width: 50px;
+}
+
+.label[data-tag*="info"] {
+    background-color: #296D92;
+}
+
+.label[data-tag*="descarga"] {
+    background-color: #47B362;
+}
+
+.label[data-tag*="tabla"] {
+    background-color: #C64F32;
+}
+
+.label[data-tag*="mapa"] {
+    background-color: #C944DA;
 }

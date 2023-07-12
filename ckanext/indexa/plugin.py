@@ -5,6 +5,12 @@ import ckan.plugins.toolkit as toolkit
 from ckan.lib.helpers import literal
 
 
+def get_download_url(url):
+    dataset_index = url.find("/dataset/") + 1
+    dataset_id = url[dataset_index + 8 :]
+    return url[:dataset_index] + "dataset/groups/" + dataset_id
+
+
 def get_csv_id(resources):
     for resource in resources:
         try:
@@ -12,6 +18,16 @@ def get_csv_id(resources):
                 return resource["id"]
         except:
             if "CSV" in resource.format:
+                return resource.id
+
+
+def get_map_id(resources):
+    for resource in resources:
+        try:
+            if "Mapa" in resource["name"]:
+                return resource["id"]
+        except:
+            if "Mapa" in resource.name:
                 return resource.id
 
 
@@ -92,6 +108,8 @@ class IndexaPlugin(plugins.SingletonPlugin):
             "get_url_tag_org": get_url_tag_org,
             "get_dataset_url": get_dataset_url,
             "get_csv_id": get_csv_id,
+            "get_map_id": get_map_id,
+            "get_download_url": get_download_url,
         }
 
     def before_map(self, route_map):

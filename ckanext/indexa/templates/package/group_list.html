@@ -1,0 +1,26 @@
+{% ckan_extends %}
+{% block primary_content_inner %}
+<h1>{{pkg_dict["name"]}}</h1>
+<h3>Descargas</h3>
+<ul>
+    {% for resource in pkg_dict.resources %}
+    {% if 'Mapa' not in resource['name']%}
+
+    <li class="download-card">
+    <div style="min-width: 450px;">
+            <div>
+                <span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>
+                <p>{{resource['name']}}</p>
+            </div>
+            <p class="label label-default" data-format="{{resource['format'].lower()}}" style="line-height: 1.42857143">
+                {{resource['format']}}</p>
+        </div>
+        <div>
+            <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+            <a class="a-color" target="_blank" href="{{resource['url']}}">Descarga</a>
+        </div>
+    </li>
+    {%endif%}
+    {% endfor %}
+</ul>
+{% endblock %}
