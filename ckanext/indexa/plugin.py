@@ -34,7 +34,6 @@ def get_map_id(resources):
 def get_dataset_url(url, name):
     index = url.find("<a ") + 3
     result = url[:index] + "class=label" + url[index:]
-    # result = result.replace(name, 'Informacion')
     index_2 = result.find(">")
     result = result[:index_2] + result[index_2:].replace(name, "Información")
     return literal(result)

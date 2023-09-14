@@ -1,6 +1,6 @@
 {% ckan_extends %}
 {% block primary_content_inner %}
-<h1>{{pkg_dict["name"]}}</h1>
+<h1>{{pkg_dict['title']}}</h1>
 <h3>Descargas</h3>
 <ul>
     {% for resource in pkg_dict.resources %}
